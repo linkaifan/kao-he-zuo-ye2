@@ -1,0 +1,64 @@
+#main{
+	
+	height:1000px;
+	position: relative;
+	border: 1px solid black;
+}
+@-webkit-keyframes move /* Safari 和 Chrome */
+{
+0% {
+	background: blue;
+	left:20%;
+}
+100% {
+	background: yellow;
+	left:70%;
+}
+
+}
+#circle{
+	width:150px;
+	height:150px;
+	background:red;
+	position: absolute; 
+	top: 30%;
+	-webkit-animation:move 5s ease-in infinite alternate;
+	border-radius: 50%;
+}
+
+@-webkit-keyframes bar
+{
+0% {
+	background: red;
+	color: white;
+	width: 0%;	
+}
+100% {
+		background: yellow;
+		color: black;
+		width: 100%;      
+}
+
+}
+
+#kuang{
+	width: 35%;
+	height: 7%;
+	position: absolute;
+	top: 60%;
+	left: 35%;
+	border: 1px solid black;
+	border-radius: 5%;
+}
+
+#tiao{
+	position: relative;
+	width: 50%;	 
+	height: 100%;  
+	-webkit-animation:bar 5s ease-in ;
+	animation-fill-mode :forwards;
+	border-radius: 5%;
+	text-align:center;
+	font-size: 25px;
+	line-height:70px ;
+}
