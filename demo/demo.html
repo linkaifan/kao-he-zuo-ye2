@@ -5,6 +5,25 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" type="text/css" href="demo.css">
+<script>
+	window.onload=function () {
+		var onum=document.getElementById('num');
+		move();
+	}
+	var timer=null;
+	function move(){
+		var onum=document.getElementById('num');
+		clearInterval(timer);
+		timer=setInterval(function(){
+			if (onum.innerHTML==100) {
+				clearInterval(timer);
+			}
+			else{
+				onum.innerHTML=parseInt(onum.innerHTML)+10;
+			}
+		},500);
+	}
+</script>
 </head>
 <body>
 <div id="main" >
