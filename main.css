@@ -1,0 +1,159 @@
+body{
+	background-image: url(img/BG2.jpg);  
+	background-repeat: no-repeat;
+	background-size: 185%;
+	text-align: center;
+	height: 1350px;
+}
+.zong{
+
+}
+.ti{
+	text-align: center;
+	color: white;
+	margin-top: 200px;
+	font-size: 33px;
+}
+
+#fenli{
+	border: 1px solid white;
+	width: 150px;
+	margin: 40px auto;
+}
+
+#BB{
+	font-size: 20px;
+	color: white;
+}
+
+.zuo{
+	float: left;
+	width: 22%;
+	height: 1000px;
+	margin-left: 8%;
+	background-color:rgba(255,255,255,0.6);
+}
+
+#tu1{
+	margin-top: 20px;
+} 
+
+#ge{
+	margin-top: 50px;
+	text-align: left;
+	margin-left: 55px;
+}
+.you{
+	width: 55%;
+	height: 1000px;
+	margin-left: 4%;
+	margin-right: 8%; 
+	background-color: rgba(255,255,255,0.6) ; 
+	float: left;
+	overflow: auto;
+}
+
+.L{
+	list-style-type:none; 
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+#kong{
+	clear: both;
+	height: 0px;
+}
+.foot{
+	width: 60%;
+	height: 50px;
+	background-color:rgba(255,255,255,0.2);
+	margin-top: 80px;
+	margin-left: 17%;
+	line-height: 50px;
+}
+.wei,.A2{
+	font-size: 130%;
+	letter-spacing: 5px;
+	text-decoration: none;
+	font-weight: 900;
+	font-family: "微软雅黑"；
+
+}
+.L{
+	margin-top: 60px;
+	margin-left: 50px;
+	display: block;
+	width: 60%;
+	height: 50px;
+	background-color:rgba(100,149,237,0.4);
+	line-height: 50px;
+	text-align: center;
+	border-radius: 6px;
+}
+.C1{
+	width: 80%;
+	height: 1000px;
+	margin: 10%;
+	line-height: 50px;
+}
+.P1{
+	line-height: 60px;
+	font-size: 80%;
+	letter-spacing: 3px;
+	font-weight: 700;
+	font-family: "微软雅黑"；
+}
+.C2{
+	width: 80%;
+	height: 1500px;
+	
+	margin: 10%;
+
+}
+.P2{
+	line-height: 60px;
+	font-size: 150%;
+	letter-spacing: 3px;
+	font-weight: 700;
+	font-family: "微软雅黑"；
+}
+
+.C3{
+	width: 80%;
+	height: 1000px;
+	margin: 10%;
+}
+
+.P3{	
+	line-height: 60px;
+	font-size: 150%;
+	letter-spacing: 3px;
+	font-weight: 700;
+	font-family: "微软雅黑"；
+}	
+#ge1{
+	  font-family:"微软雅黑","黑体","宋体";
+      font-size:21px;
+      padding: 10px;
+      font color;
+      line-height: 27px;
+}
+#qian{
+      font-family:"微软雅黑","黑体","宋体";
+      font-size:21px;
+      line-height:25px;
+}
+.A2:hover{
+	color: blue;
+}
+.L:hover{
+	margin-top: 57px;
+	margin-left: 40px;
+	display: block;
+	width: 65%;
+	height: 57px;
+	background-color:rgba(100,149,237,0.7);
+	line-height: 50px;
+	text-align: center;
+
+}
