@@ -1,13 +1,14 @@
 body{
 	text-align: center;
+	background: url(img/bg.png);
+	background-repeat: no-repeat;
+	background-size:100%;
 }
 
 #bg{
-	height: 1000px;
-	background: url(img/bg.png);
-	position: relative;
-	background-repeat: no-repeat;
-	background-size:cover;
+	height: 864px;
+	width: 100%;
+	position:relative;
 }
 .landIcon{                            /*右上角登陆图标*/
 	position:absolute;
@@ -17,10 +18,10 @@ body{
 }
 #loginBox{                             /*登陆框，当点击上面图标时弹出，点击X图标消失*/
 	position: absolute;
-	width: 45%;height:52%;
+	width: 40%;height:60%;
 	top: 20%;
 	left: 50%;
-	margin-left: -22.5%;
+	margin-left: -20%;
     border:2px solid rgb(77, 73, 71);
     background-color: rgb(239, 243, 246);
     opacity: 0.902;
@@ -38,51 +39,58 @@ body{
 #logo2{                        /*登陆框里面的logo*/
 	display: block;
 	position: absolute;
-	top: 15%;
+	top: 10%;
 	left: 50%;
 	margin-left: -16.5%;
 	width:33%;height: 25%;
 }
 #identity{                   /*输入用户名的框*/
 	position: absolute;
-	top: 50%;
-	right: 25%;
+	top: 46%;
 	font-size: 24px;
     font-family: "Adobe Heiti Std";
     color: rgb(77, 79, 85);
+    width: 100%;
+
+
 }
 #loginText,#passText{          /*两个输入文本*/
+	text-indent: 1em;
 	display: inline-block;
 	font-size: 20px;
     font-family: "Adobe Heiti Std";
     color: rgba(77, 79, 85, 0.651);
     margin-left: 10px;
     border: 0.1px solid gray;
-    width: 70%;
+    width: 40%;
     border-radius: 21px;
     background-color: rgb(252, 252, 252);
     box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
     padding-left:8px;    
 }
-#password{                 /*输入密码的狂*/
+#password{                 /*输入密码的框*/
 	position: absolute;
-	top: 60%;
-	right: 25%;
+	top: 65%;
 	font-size: 24px;
     font-family: "Adobe Heiti Std";
     color: rgb(77, 79, 85);
+    width: 100%;
+}
+#password input,
+#identity input{
+	height: 35px;
 }
 #login{                 /*登陆按钮*/
 	position: absolute;
-	top: 75%;
+	top: 80%;
 	right: 50%;
 	width: 20%;
 	height: 11%;
 }
 #sign{                     /*注册按钮*/
 	position: absolute;
-	top: 78%;
-	right: 27%;
+	top: 83%;
+	right: 30%;
 	height:11%;
 	font-size: 20px;
     font-family: "Adobe Heiti Std";
@@ -90,11 +98,12 @@ body{
     text-decoration: underline;
     line-height: 1.2;
 }
+
 .logo{                   /*大logo*/
 	position: absolute;
 	width: 27%;
 	height: 25%;
-	top: 27.5%;
+	top: 35%;
 	left: 50%;
 	margin-left: -13%;
 
@@ -108,7 +117,7 @@ body{
 	cursor:pointer;  
 }
 .logo p{                            /*Logo下面的文字*/
-	margin: 4% auto;
+	margin: 1% auto;
     font-family: "FZCJHJW";
     color: rgba(63, 49, 33, 0.651);
     font-size: 1.3em;
@@ -117,7 +126,7 @@ body{
 }
 .search{                 /*搜索栏整个大框*/
 	position: absolute;
-	top: 54%;
+	top: 64%;
 	left: 50%;
 	width: 25%;
 	height: 4.8%;
@@ -133,10 +142,10 @@ body{
 	position: absolute;
 	top: 20%;right: 3%;
 }
-.search input{
+.search input{             /*搜索里面的输入框*/
 	position: absolute;
-	width: 75%;height: 85%;
-	left: 10%;top: 6%;
+	width: 75%;height: 84%;
+	left: 10%;top: 6.3%;
 	border: 0px ;
 	font-family: "Adobe Heiti Std";
     color: rgb(77, 79, 85);
@@ -144,6 +153,7 @@ body{
     -webkit-transform: matrix( 1.09082563045265,0,0,1.08200371860065,0,0);
     -ms-transform: matrix( 1.09082563045265,0,0,1.08200371860065,0,0);
     font-size: 1.7em;
+    text-indent: 0.5em;
 }
 .search input:focus,                   
 #loginBox input:focus
@@ -154,14 +164,15 @@ body{
 .nav{
 	position: absolute;
 	width: 28%;height: 4%;
-	left: 39%;top: 63%;
+	left: 39%;top: 73%;
 	text-align: left;
 }
 .Btn{
 	border: 1px solid rgb(134, 129, 129);
 	display: inline-block;
-	width: 19%;
-    height: 65%;
+	width: 15%;
+	margin-left: 14px;
+    height:70%;
     background-color: rgb(239, 239, 239);
     opacity: 0.76;
     border-radius: 21px;
@@ -169,11 +180,11 @@ body{
     font-family: "Microsoft YaHei";
     margin-right: 1%; 
     text-align: center;
-    line-height: 2;
+    line-height: 1.4em;
     color: rgb(4, 4, 4);
  }
  /*css做的loading动画，好渣，先放着，以后优化*/
- #LoadingBox{
+ #LoadingBox{                       /*遮罩*/
 	width: 100%;
 	height: 100%;
 	border: 1px solid black;
@@ -183,4 +194,5 @@ body{
 	z-index: 3;
 	display: none;
 }
+
 
