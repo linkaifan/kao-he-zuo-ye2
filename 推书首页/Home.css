@@ -6,9 +6,9 @@ body{
 }
 
 #bg{
-	height: 864px;
+	height: 100%;
 	width: 100%;
-	position:relative;
+	position:fixed;
 }
 .landIcon{                            /*右上角登陆图标*/
 	position:absolute;
@@ -103,7 +103,7 @@ body{
 	position: absolute;
 	width: 27%;
 	height: 25%;
-	top: 35%;
+	top: 30%;
 	left: 50%;
 	margin-left: -13%;
 
@@ -111,6 +111,8 @@ body{
 .logo img{
 	display: block;
 	margin: 0 auto;
+	width: 65%;
+	height: 85%;
 }
 .search img:hover,.landIcon img:hover,.Btn:hover,#sign:hover,#Loginbutton:hover,#close:hover           /*使鼠标进过其，图标变换*/
 {
@@ -126,14 +128,13 @@ body{
 }
 .search{                 /*搜索栏整个大框*/
 	position: absolute;
-	top: 64%;
+	top: 58%;
 	left: 50%;
 	width: 25%;
 	height: 4.8%;
 	margin-left: -12.5%;
 	border-width: 0.1px;
     border-color: rgb(0, 0, 0);
-    border-style: solid;
     border-radius: 21px;
     background-color: rgb(252, 252, 252);
     box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
@@ -164,7 +165,7 @@ body{
 .nav{
 	position: absolute;
 	width: 28%;height: 4%;
-	left: 39%;top: 73%;
+	left: 39%;top: 65%;
 	text-align: left;
 }
 .Btn{
