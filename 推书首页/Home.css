@@ -6,9 +6,9 @@ body{
 }
 
 #bg{
-	height: 864px;
+	height: 100%;
 	width: 100%;
-	position:relative;
+	position:fixed;
 }
 .landIcon{                            /*右上角登陆图标*/
 	position:absolute;
