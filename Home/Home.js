@@ -14,7 +14,24 @@ window.onload=function ()
 	ologinText.onclick=function(){
 		changeText(ologinText);
 	}
-
+	var opassText=document.getElementById('passText');      
+	var ologin=document.getElementById('login');
+    ologin.onclick=function () {                       //点击登陆进行表单验证
+    	var loginRe=/^[a-z]+$/i;
+    	if(loginRe.test(ologinText.value)){
+    		alert('合法的用户名');
+    	}
+    	else{
+    		alert('抱歉，出错');
+    	}
+    	var passwordRe=/^\d{6,10}$/;
+    	if (passwordRe.test(opassText.value)) {
+    		alert('合法的密码');
+    	}
+    	else{
+    		alert('抱歉，出错');
+    	}
+    }
 	var olandIcon=document.getElementById('landIcon');
 	var ologinBox=document.getElementById('loginBox');     //点击，窗口弹出
 	olandIcon.onclick=function(){

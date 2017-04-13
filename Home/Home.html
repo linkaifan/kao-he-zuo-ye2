@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" type="text/css" href="Home.css">
+</head>
+<body>
+<div id='bg'>
+	<div class="landIcon" id='landIcon'><img src="img/loadIcon.png" title="登陆" alt="登陆按钮"  /></div>
+	<div id='loginBox'>
+		<img src="img/X.png" alt='close' title="close" id='close'/>
+		<img src="img/logo2.png" alt="logo2" title="logo2" id="logo2"/>
+		<form id='loginBoxForm' action="" method="post">
+		<div id='identity'>账号：<input type="text" id="loginText" name='loginText' value="用户名"></div>
+		<div id='password'>密码：<input type="text" id="passText" name='passText' value=""/></div>
+		<input type="submit" name="submit" value="登陆" id='login'/> 
+		<div id='sign'>注册</div>
+		</form>
+	</div>
+	<div class="logo">
+		<img src="img/logo.png" title="logo" alt="logo" />
+		<p>The books that know you</p>
+	</div>
+	<div class="search">
+		<form action="" method="post"><input type="search" id="Text" title='search' value="搜索"/>	
+		<img src="img/search.png" title="search" alt="search" id='searchImg'/></form>
+	</div>
+	<div class="nav">
+		<a class="Btn" href="../class+detail/class1.html">大类1</a>
+		<a class="Btn" href='../class+detail/class2.html'>大类2</a>
+		<a class="Btn" href='../class+detail/class3.html'>大类3</a>
+		<a class="Btn" href='../class+detail/class4.html'>大类4</a>
+	</div>
+	<div id='LoadingBox'>
+		<p>Loading</p>
+		<i id='i1'></i>
+		<i id='i2'></i>
+		<i id='i3'></i>
+	</div>
+</div>
+<script src="Home.js"></script>
+</body>
+</html>

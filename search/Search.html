@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Search</title>
+	<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="Search.css">
+</head>
+<body>
+<header>
+	<img src="SearchImg/toplogo.png" alt="toplogo" title="toplogo" id='toplogo'  />
+	<nav id='menu'>
+		分类<br>
+		<a href="../class+detail/class1.html">分类1</a><br>
+		<a href="../class+detail/class2.html">分类2</a><br>
+		<a href="../class+detail/class3.html">分类3</a><br>
+		<a href="../class+detail/class4.html">分类4</a><br>
+	</nav>
+	<div>
+		<form action="" method="post">
+			<input type="search" id="Text" title='search' value="请搜索"/>	
+			<img src="SearchImg/search.png" title="search" alt="search" id='searchImg'/>
+		</form>
+	</div>
+
+</header>
+<div id='zhanwei'></div>
+<div id="SearchValue">
+	<div>搜索的东西</div>
+</div>
+<div id='main'>
+	<div id='mainbg'>
+	<div id='center'>
+		<div class="show">
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+		</div>
+		<div class="star">
+			<img src="SearchImg/start.png"/>	
+			<p>书名</p>
+			<p>作者</p>
+		</div>
+		<div class="line"></div>
+		<div id='ZW'></div>
+		<div id='ZW'></div>
+		<div class="show">
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+				<img src="SearchImg/book.png"/>
+		</div>
+		<div class="star">
+			<img src="SearchImg/start.png"/>	
+			<p>书名</p>
+			<p>作者</p>
+		</div>
+		<div class="line"></div>
+	</div>
+	<footer>
+	<img src="SearchImg/left.png"/>
+	<a href="" class="active">1</a>
+	<a href="">2</a>
+	<a href="">3</a>
+	<a href="">...</a>
+	<a href="">x</a>
+	<img src="SearchImg/right.png"/>
+	<p>第X页</p>
+	</footer>
+	</div>
+</div>
+<div id='DetailBox'>
+	<content>
+		<img src="SearchImg/close.png" alt="close" title="close" id='close' />
+		<img class='group1' src="SearchImg/group1.png"/>
+		<img class='group2' src="SearchImg/group2.png"/>
+		<div class="detail">
+			<img src="SearchImg/bookcover.png"/ id='bookcover'>
+			<div class="information">
+				<h3>书名</h3>
+				<p><img src="SearchImg/writer.png">&nbsp;|&nbsp;作者</p>
+				<p><img src="SearchImg/chu.png">&nbsp;|&nbsp;出版社</p>
+				<div></div>
+				<p><img src="SearchImg/time.png">&nbsp;|&nbsp;出版时间</p>
+				<p><img src="SearchImg/library.png">&nbsp;|&nbsp;图书馆藏书：x本<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x楼x架xx</p>
+				<div></div><div></div>
+				<p><img src="SearchImg/book-icon.png">&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="https://www.douban.com"><img src="SearchImg/douban.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://www.zhihu.com/"><img src="SearchImg/zhihu.png"></a>&nbsp;&nbsp;</p>
+				<p><img src="SearchImg/buy.png">&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="https://www.jd.com"><img src="SearchImg/JD.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="http://www.dangdang.com/"><img src="SearchImg/dang.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="https://www.amazon.cn/"><img src="SearchImg/amazon.png"></a>&nbsp;&nbsp;</p>
+			</div>
+		</div>
+		<div class="describe">
+			<h3>作者简介</h3><span>作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。作者很帅很厉害。</span>
+			<h3>书籍简介</h3><span>这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。这本书很好看，真的。</span>
+		</div>
+	</content>
+</div>
+<div id='LoadingBox'>
+		<p>Loading</p>
+		<i id='i1'></i>
+		<i id='i2'></i>
+		<i id='i3'></i>
+	</div>
+<script src="Search.js"></script>
+</body>
+</html>
