@@ -14,7 +14,14 @@ body{
 	position:absolute;
 	top: 6%;
 	right: 6%;
-	width: 2.7%;height: 4.1%;
+}
+.landIcon span{
+    font-size: 20px;
+    font-family: "Adobe Heiti Std";
+    color: rgb(114, 116, 121);
+    text-decoration: underline;
+    line-height: 1.2;
+    display: none;
 }
 #loginBox{                             /*登陆框，当点击上面图标时弹出，点击X图标消失*/
 	position: absolute;

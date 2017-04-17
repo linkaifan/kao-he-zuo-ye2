@@ -88,10 +88,20 @@ window.onload=function(){
 		tab();
 	}
 	var timer=setInterval(next,2500);            //鼠标移入时，停止自动切换
+	var nextBtn=document.getElementById('next');
 	oplay.parentNode.onmouseover=function(){
-		clearInterval(timer);
+		clearInterval(timer);	
+		nextBtn.style.display='block';
+		nextBtn.onclick=function(){
+			now++;
+			if (now==3) {
+			now=0;
+			};
+			tab();
+		}
 	};
 	oplay.parentNode.onmouseout=function(){
+		nextBtn.style.display='none';
 		timer=setInterval(next,2500);
 	};
 	var oCenter=document.getElementById('center');      //类1，2，3，4的切换
