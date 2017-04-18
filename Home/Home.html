@@ -5,6 +5,8 @@
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" type="text/css" href="Home.css">
+<script type="text/javascript" src="../Jq+mock/JQ1.9.1.js"></script>
+<script src="../Jq+mock/mockjs.js"></script>
 </head>
 <body>
 <div id='bg'>
@@ -17,7 +19,7 @@
 		<img src="img/logo2.png" alt="logo2" title="logo2" id="logo2"/>
 		<form id='loginBoxForm' action="" method="post">
 		<div id='identity'>账号：<input type="text" id="loginText" name='loginText' value="用户名"></div>
-		<div id='password'>密码：<input type="text" id="passText" name='passText' value=""/></div>
+		<div id='password'>密码：<input type="password" id="passText" name='passText' value=""/></div>
 		<input type="submit" name="submit" value="登陆" id='login'/> 
 		<div id='sign'>注册</div>
 		</form>
@@ -44,5 +46,6 @@
 	</div>
 </div>
 <script src="Home.js"></script>
+<script src='HomeJq.js'></script>
 </body>
 </html>

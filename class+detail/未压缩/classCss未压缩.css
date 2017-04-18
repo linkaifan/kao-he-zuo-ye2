@@ -171,6 +171,9 @@ li.active{
 	margin-top: 25px;
 	width: 100%;
 }
+.star div{
+	display: inline-block;
+}
 .star img{
 	margin-left: 5%;
 }
