@@ -60,7 +60,7 @@ $(document).ready(function(){
                			AuthorBookname('#class3','2');
                			AuthorBookname('#class4','3');
 
-               			function Detail(id,n){											//详情页
+               			function Detail(id,n){               											//详情页
                				$(id+' .show img').each(function(index,element){
                					$(this).click(function(){
                						$('h3:first').text(bookdata.bookclass[n].bookInfo[index].title);				
@@ -72,15 +72,44 @@ $(document).ready(function(){
                						$('.information p:eq(3) span:first').text(bookdata.bookclass[n].bookInfo[index].library[0].total);					
                						$('.information p:eq(3) span:eq(1)').text(bookdata.bookclass[n].bookInfo[index].library[0].position);
                						$('.detail img:eq(0)').attr('src',bookdata.bookclass[n].bookInfo[index].cover);	
-               					
                					})
                				})
-               			}
+               			}            
                			Detail('#class1','0');
                			Detail('#class2','1');
                			Detail('#class3','2');
                			Detail('#class4','3');
 
+               			function page(id,pageN,n){ 														//翻页
+               				$('footer a:eq('+pageN+')').click(function(){	
+               				var N=8*pageN; 							
+               				$(  id+' .star .bookname').each(function(index,element){              
+               					$(this).text(bookdata.bookclass[n].bookInfo[index+N].title);
+               				});
+               				$(  id+' .star .author').each(function(index,element){  
+               					$(this).text(bookdata.bookclass[n].bookInfo[index+N].author);
+               				});
+               				$(id+' .show img').each(function(index,element){
+               					$(this).click(function(){
+               						$('h3:first').text(bookdata.bookclass[n].bookInfo[index+N].title);				
+               						$(' #ahthorIntro').text(bookdata.bookclass[n].bookInfo[index+N].ahthorIntro);		
+               						$(' #bookIntro').text(bookdata.bookclass[n].bookInfo[index+N].bookIntro);			
+               						$('.information p:eq(0) span:first').text(bookdata.bookclass[n].bookInfo[index+N].author);					
+               						$('.information p:eq(1) span:first').text(bookdata.bookclass[n].bookInfo[index+N].publish);				
+               						$('.information p:eq(2) span:first').text(bookdata.bookclass[n].bookInfo[index+N].publishDate);				
+               						$('.information p:eq(3) span:first').text(bookdata.bookclass[n].bookInfo[index+N].library[0].total);					
+               						$('.information p:eq(3) span:eq(1)').text(bookdata.bookclass[n].bookInfo[index+N].library[0].position);
+               						$('.detail img:eq(0)').attr('src',bookdata.bookclass[n].bookInfo[index+N].cover);	
+               					})
+               				})
+               			});
+
+               			}
+               			page('#class1','0','0');page('#class1','1','0');page('#class1','2','0');//分类1翻页
+               			page('#class2','0','1');page('#class1','1','1');page('#class1','2','1');//分类2翻页
+               			page('#class3','0','2');page('#class1','1','2');page('#class1','2','2');//分类3翻页
+               			page('#class4','0','3');page('#class1','1','3');page('#class1','2','3');//分类4翻页
+               			//到这里写完了分类的数据交互，但代码还是有重复的部分。哎，等有时间冷静下来改！功能部分还不太完美，比如，切换分类后如何跳转到第一页。
 
         				
                 }

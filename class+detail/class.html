@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 	<title>分类</title>
-<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/normalize/5.0.0/normalize.min.css"/>
+<link rel="stylesheet" type="text/css" href="../CSSinitialize/CSSinitialize.css"/>
 <link rel="stylesheet" type="text/css" href="classCss.css"/>
 <script type="text/javascript" src="../Jq+mock/JQ1.9.1.js"></script>
 <script src="../Jq+mock/mockjs.js"></script>
@@ -23,6 +23,9 @@
 <div id='CarouselFigure'>	
 	<div id='next' class="PreNext">
 		<img src="classImg/Nextbtn.jpg"/>
+	</div>
+	<div id='pre' class="PreNext">
+		<img src="classImg/Prebtn.jpg"/>
 	</div>
   	<ul id='play'>
   		<li id='play1'><img src="classImg/introduct.png" class="playlogo"><img src="classImg/banner1.png" ></li>
@@ -46,13 +49,13 @@
 		</nav>
 		<div id='line'></div>
 		<content id='class1' class="tabClassActive">		<!--分类1--> 
-		<div class="show">
+			<div class="show">
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
-		</div>
-		<div class="star">
+			</div>
+			<div class="star">
 			<div>
 			<img src="classImg/start.png"/>	
 			<p class="bookname">书名</p>
@@ -73,16 +76,16 @@
 			<p class="bookname">书名</p>
 			<p class="author">作者</p>
 			</div>
-		</div>
-		<div class="line"></div>
-		<div id='ZW'></div>
-		<div class="show">
+			</div>
+			<div class="line"></div>
+			<div id='ZW'></div>
+			<div class="show">
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
 				<img src="classImg/book.png"/>
-		</div>
-		<div class="star">
+			</div>
+			<div class="star">
 			<div>
 			<img src="classImg/start.png"/>	
 			<p class="bookname">书名</p>
@@ -103,8 +106,8 @@
 			<p class="bookname">书名</p>
 			<p class="author">作者</p>
 			</div>
-		</div>
-		<div class="line"></div>
+			</div>
+			<div class="line"></div>
 		</content>
 		<content id='class2' class="tabClass">		<!--分类2--> 
 		<div class="show">
@@ -290,16 +293,6 @@
 		<div class="line"></div>
 		</content>
 	</div>
-	<footer>
-	<img src="classImg/left.png"/>
-	<a href="" class="active">1</a>
-	<a href="">2</a>
-	<a href="">3</a>
-	<a href="">...</a>
-	<a href="">x</a>
-	<img src="classImg/right.png"/>
-	<p>第X页</p>
-	</footer>
 </div>
 <div id='DetailBox'>
 	<content>
@@ -331,12 +324,20 @@
 		</div>
 	</content>
 </div>
+<footer>
+	<img src="classImg/left.png"/>
+	<a href="" class="active">1</a>
+	<a href="">2</a>
+	<a href="">3</a>
+	<img src="classImg/right.png"/>
+	<p>共3页</p>
+</footer>
 <div id='LoadingBox'>
 		<p>Loading</p>
 		<i id='i1'></i>
 		<i id='i2'></i>
 		<i id='i3'></i>
-	</div>
+</div>
 <script src="classJs.js"></script>
 <script src="classJq.js"></script>
 </body>

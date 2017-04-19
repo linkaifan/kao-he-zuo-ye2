@@ -112,16 +112,18 @@ header div form input:focus{
 li.active{
 	background-color: #4d4947;
 }
-.PreNext{
+.PreNext{				/*PreNext按钮*/
 	display:none; 
 	position: absolute;
 	top: 30%;
 	z-index: 4;
 }
-#next{
+#next{					/*Next按钮*/
 	right: 0;
 }
-
+#Pre{					/*Pre按钮*/
+	left: 0;
+}
 #main{                    /*主要内容*/
 	width: 100%;
 	height: 70%;

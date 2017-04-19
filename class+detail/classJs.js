@@ -89,9 +89,10 @@ window.onload=function(){
 	}
 	var timer=setInterval(next,2500);            //鼠标移入时，停止自动切换
 	var nextBtn=document.getElementById('next');
+	var preBtn=document.getElementById('pre');
 	oplay.parentNode.onmouseover=function(){
 		clearInterval(timer);	
-		nextBtn.style.display='block';
+		nextBtn.style.display='block';			//鼠标移入，点击next按钮，向下切换
 		nextBtn.onclick=function(){
 			now++;
 			if (now==3) {
@@ -99,9 +100,19 @@ window.onload=function(){
 			};
 			tab();
 		}
+		preBtn.style.display='block';
+		preBtn.onclick=function(){
+			now--;
+			if (now==-1) {
+				now=2;
+			}
+			tab();
+		}
+
 	};
 	oplay.parentNode.onmouseout=function(){
 		nextBtn.style.display='none';
+		preBtn.style.display='none';
 		timer=setInterval(next,2500);
 	};
 	var oCenter=document.getElementById('center');      //类1，2，3，4的切换
