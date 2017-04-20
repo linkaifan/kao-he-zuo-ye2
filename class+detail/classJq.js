@@ -83,10 +83,10 @@ $(document).ready(function(){
                			function page(id,pageN,n){ 														//翻页
                				$('footer a:eq('+pageN+')').click(function(){	
                				var N=8*pageN; 							
-               				$(  id+' .star .bookname').each(function(index,element){              
+               				$(id+' .star .bookname').each(function(index,element){              
                					$(this).text(bookdata.bookclass[n].bookInfo[index+N].title);
                				});
-               				$(  id+' .star .author').each(function(index,element){  
+               				$(id+' .star .author').each(function(index,element){  
                					$(this).text(bookdata.bookclass[n].bookInfo[index+N].author);
                				});
                				$(id+' .show img').each(function(index,element){
@@ -105,11 +105,29 @@ $(document).ready(function(){
                			});
 
                			}
-               			page('#class1','0','0');page('#class1','1','0');page('#class1','2','0');//分类1翻页
-               			page('#class2','0','1');page('#class1','1','1');page('#class1','2','1');//分类2翻页
-               			page('#class3','0','2');page('#class1','1','2');page('#class1','2','2');//分类3翻页
-               			page('#class4','0','3');page('#class1','1','3');page('#class1','2','3');//分类4翻页
+                             page('#class1','0','0');page('#class1','1','0');page('#class1','2','0'); 
+                              $('nav a').each(function(){
+                                   $(this).click(function(){
+                                   if ($('#class1').attr('class')=="tabClassActive"){     
+                                        page('#class1','0','0');page('#class1','1','0');page('#class1','2','0');     //分类1翻页
+                                        
+                                   }
+               			     else if($('#class2').attr('class')=="tabClassActive"){
+                                        page('#class2','0','1');page('#class2','1','1');page('#class2','2','1');     //分类2翻页
+                                        
+                                   }
+                                   else if ($('#class3').attr('class')=="tabClassActive") {
+                                        page('#class3','0','2');page('#class3','1','2');page('#class3','2','2');     //分类3翻页
+                                        
+                                   }
+                                   else if ($('#class4').attr('class')=="tabClassActive") {
+               			          page('#class4','0','3');page('#class4','1','3');page('#class4','2','3');     //分类4翻页
+                                        
+                                   }
+                                   })
+                              })   
                			//到这里写完了分类的数据交互，但代码还是有重复的部分。哎，等有时间冷静下来改！功能部分还不太完美，比如，切换分类后如何跳转到第一页。
+
 
         				
                 }

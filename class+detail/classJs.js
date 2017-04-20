@@ -197,7 +197,8 @@ window.onload=function(){
     var e = event || window.event || arguments.callee.caller.arguments[0];
         if(e && e.keyCode==13){ 
                 oLoadingBox.style.display='block'; 
-                var openSearchHtml=setTimeout(open,4000);	
+                var openSearchHtml=setTimeout(open,4000);
+                return false;	
         }
         if(e && e.keyCode==27){  
                 oLoadingBox.style.display='none'; 

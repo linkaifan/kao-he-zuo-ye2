@@ -54,6 +54,7 @@ window.onload=function ()
     var e = event || window.event || arguments.callee.caller.arguments[0];
         if(e && e.keyCode==13){ 
                 oLoadingBox.style.display='block'; 
+                return false;
         }
         if(e && e.keyCode==27){  
                 oLoadingBox.style.display='none'; 
