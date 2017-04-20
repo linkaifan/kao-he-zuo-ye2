@@ -1,1 +1,128 @@
-function changeText(a){if(a.getAttribute("value")){a.setAttribute("value","")}}function getStyle(b,a){if(b.currentStyle){return b.currentStyle[a]}else{return getComputedStyle(b,false)[a]}}function startMove(c,b,a){clearInterval(c.timer);c.timer=setInterval(function(){var e=true;for(var d in b){var g=0;if(d=="opacity"){g=Math.round(parseFloat(getStyle(c,d))*100)}else{g=parseInt(getStyle(c,d))}var f=(b[d]-g)/6;f=f>0?Math.ceil(f):Math.floor(f);if(g!=b[d]){e=false}if(d=="opacity"){c.style.filter="alpha(opacity:"+(g+f)+")";c.style.opacity=(g+(f))/100}else{c.style[d]=g+f+"px"}}if(e){clearInterval(c.timer);if(a){a()}}},30)}window.onload=function(){var g=document.getElementById("Text");g.onclick=function(){changeText(g)};var h=document.getElementsByTagName("footer")[0];var b=h.getElementsByTagName("a");for(var d=0;d<b.length;d++){b[d].onclick=function(){for(var o=0;o<b.length;o++){b[o].className=""}this.className="active";return false}}var a=document.getElementById("DetailBox");var n=document.getElementsByClassName("show")[0];var m=document.getElementsByClassName("show")[1];var j=n.getElementsByTagName("img");var k=m.getElementsByTagName("img");for(var d=0;d<j.length;d++){j[d].onclick=function(){a.style.display="block";a.style.zIndex=3;startMove(a,{width:1280,height:1150,opacity:100})};k[d].onclick=function(){a.style.display="block";a.style.zIndex=3;startMove(a,{width:1280,height:1150,opacity:100})}}var l=document.getElementById("close");l.onclick=function(){a.style.display="none";startMove(a,{width:0,height:0,opacity:0});a.style.zIndex=-3};var f=document.getElementById("searchImg");var c=document.getElementById("LoadingBox");f.onclick=function(){c.style.display="block"};document.onkeydown=function(i){var o=i||window.event||arguments.callee.caller.arguments[0];if(o&&o.keyCode==13){c.style.display="block"}if(o&&o.keyCode==27){c.style.display="none"}};var e=document.getElementById("menu");menu.onmouseover=function(){startMove(e,{height:135})};menu.onmouseout=function(){startMove(e,{height:33})}};
+function changeText(obj){                           //写了一个聚焦清空原文本的函数
+	if (obj.getAttribute('value')) {
+			obj.setAttribute('value','');
+	}
+};
+function getStyle(obj, name)                    //取得obj的某个样式，兼容。        
+{
+	if(obj.currentStyle)
+	{
+		return obj.currentStyle[name];
+	}
+	else
+	{
+		return getComputedStyle(obj, false)[name];
+	}
+};
+function startMove(obj, json, fnEnd)                //运动框架
+{
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function (){
+		var bStop=true;		//假设：所有值都已经到了
+		
+		for(var attr in json)
+		{
+			var cur=0;
+			
+			if(attr=='opacity')
+			{
+				cur=Math.round(parseFloat(getStyle(obj, attr))*100);
+			}
+			else
+			{
+				cur=parseInt(getStyle(obj, attr));
+			}
+			
+			var speed=(json[attr]-cur)/6;
+			speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			
+			if(cur!=json[attr])
+				bStop=false;
+			
+			if(attr=='opacity')
+			{
+				obj.style.filter='alpha(opacity:'+(cur+speed)+')';
+				obj.style.opacity=(cur+(speed))/100;
+			}
+			else
+			{
+				obj.style[attr]=cur+speed+'px';
+			}
+		}
+		
+		if(bStop)
+		{
+			clearInterval(obj.timer);
+						
+			if(fnEnd)fnEnd();
+		}
+	}, 30);
+}
+window.onload=function(){
+	var oText=document.getElementById('Text');			//运用到搜索栏
+	oText.onclick=function(){
+		changeText(oText);
+	};
+	var ofooter=document.getElementsByTagName('footer')[0];        //页码的切换
+	var oPageBtn=ofooter.getElementsByTagName('a');
+	for (var i = 0; i < oPageBtn.length; i++) {
+		oPageBtn[i].onclick=function(){
+			for (var i = 0; i < oPageBtn.length; i++) {
+				oPageBtn[i].className='';
+			}
+			this.className='active';
+			return false;
+		}
+	};
+	var oDetailBox=document.getElementById('DetailBox');        //初始时，分类1，点击书面弹出详情页面
+	var oldshow0=document.getElementsByClassName('show')[0];
+	var oldshow1=document.getElementsByClassName('show')[1];
+	var oldImgBtn0=oldshow0.getElementsByTagName('img');
+	var oldImgBtn1=oldshow1.getElementsByTagName('img');
+	for (var i = 0; i < oldImgBtn0.length; i++) {
+		oldImgBtn0[i].onclick=function(){
+			oDetailBox.style.display='block';
+			oDetailBox.style.zIndex=3;
+			startMove(oDetailBox,{width:1280, height:1150, opacity:100});
+		}
+		oldImgBtn1[i].onclick=function(){
+			oDetailBox.style.display='block';
+			oDetailBox.style.zIndex=3;
+			startMove(oDetailBox,{width:1280, height:1150, opacity:100});
+		}
+	};
+	var ocloseBtn=document.getElementById('close');
+	ocloseBtn.onclick=function(){
+		oDetailBox.style.display='none';
+		startMove(oDetailBox,{width:0, height:0, opacity:0});
+		oDetailBox.style.zIndex=-3;
+	};
+	var osearchImg=document.getElementById('searchImg');    //点击搜索图标，遮罩弹出
+	var oLoadingBox=document.getElementById('LoadingBox');
+	osearchImg.onclick=function(){
+		oLoadingBox.style.display='block';
+	}
+	document.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
+    var e = event || window.event || arguments.callee.caller.arguments[0];
+        if(e && e.keyCode==13){ 
+                oLoadingBox.style.display='block'; 
+        }
+        if(e && e.keyCode==27){  
+                oLoadingBox.style.display='none'; 
+        }
+    };
+    var omenu=document.getElementById('menu');           //二级下拉菜单
+	menu.onmouseover=function(){
+		startMove(omenu,{height:135});
+	};
+	menu.onmouseout=function(){
+		startMove(omenu,{height:33});
+	}
+	/*var aclass=omenu.getElementsByTagName('a');		//4个分类a标签,如何点击跳到对应的分类？
+	for (var i = 0; i < aclass.length; i++) {
+		aclass[i].onclick=function(){
+
+			return false;
+		}
+	}*/
+}

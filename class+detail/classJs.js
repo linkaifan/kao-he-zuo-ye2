@@ -186,15 +186,12 @@ window.onload=function(){
 		startMove(oDetailBox,{width:0, height:0, opacity:0});
 		oDetailBox.style.zIndex=-3;
 	}
-
-	function open(){									//Loading动画后跳转到搜索页
-		window.open('../search/Search.html','_self');
-	}	
+	
 	var osearchImg=document.getElementById('searchImg');    //点击搜索图标，遮罩弹出,4秒后跳转
 	var oLoadingBox=document.getElementById('LoadingBox');
 	osearchImg.onclick=function(){
 		oLoadingBox.style.display='block';
-		var openSearchHtml=setTimeout(open,4000);	
+			
 	}
 	document.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
     var e = event || window.event || arguments.callee.caller.arguments[0];

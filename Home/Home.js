@@ -46,9 +46,6 @@ window.onload=function ()
 
 	var osearchImg=document.getElementById('searchImg');    //点击搜索图标，遮罩弹出
 	var oLoadingBox=document.getElementById('LoadingBox');
-	function open(){									//Loading动画后跳转到搜索页
-		window.open('../search/Search.html','_self');
-	}
 	osearchImg.onclick=function(){
 		oLoadingBox.style.display='block';
 		var openSearchHtml=setTimeout(open,4000);	
@@ -57,7 +54,6 @@ window.onload=function ()
     var e = event || window.event || arguments.callee.caller.arguments[0];
         if(e && e.keyCode==13){ 
                 oLoadingBox.style.display='block'; 
-                setTimeout(open,4000);
         }
         if(e && e.keyCode==27){  
                 oLoadingBox.style.display='none'; 

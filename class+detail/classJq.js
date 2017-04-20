@@ -114,5 +114,12 @@ $(document).ready(function(){
         				
                 }
         });
+     $('#searchImg').click(function(){
+          var SearchValue=$('form:first input:first').val();
+          function open(){                                            //Loading动画后跳转到搜索页
+               window.open('../search/Search.html?'+SearchValue,'_self');
+          }
+          var openSearchHtml=setTimeout(open,4000);    
+     })
 
 });
