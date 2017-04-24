@@ -100,7 +100,7 @@ window.onload=function(){
 			};
 			tab();
 		}
-		preBtn.style.display='block';
+		preBtn.style.display='block';				//鼠标移入，点击pre按钮，向上切换
 		preBtn.onclick=function(){
 			now--;
 			if (now==-1) {
@@ -193,11 +193,10 @@ window.onload=function(){
 		oLoadingBox.style.display='block';
 			
 	}
-	document.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
+	oText.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
     var e = event || window.event || arguments.callee.caller.arguments[0];
         if(e && e.keyCode==13){ 
                 oLoadingBox.style.display='block'; 
-                var openSearchHtml=setTimeout(open,4000);
                 return false;	
         }
         if(e && e.keyCode==27){  

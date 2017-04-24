@@ -42,8 +42,8 @@ $(document).ready(function(){
           }]
     });
 
-    if (location.href.indexOf('?')!=-1) {		//获得本网址搜索的内容
-    	var Value=location.href.split("?");		//第一本书，书名与搜索内容相同
+      if (location.href.indexOf('?')!=-1) {		     //获得本网址搜索的内容
+    	var Value=location.href.split("?");		      //第一本书，书名与搜索内容相同
     	$('.star:first p:first').text(Value[1]);
     	$('#SearchValue p:first').text(Value[1]);	
     	$.ajax({
@@ -70,9 +70,20 @@ $(document).ready(function(){
     $('form img:first').click(function(){					//输入搜索内容，点击搜索后，url上出现搜索内容
     	var SearchValue=$('form input:first').val();
     	$('#SearchValue p:first').text(SearchValue);
-    	function open(){									//Loading动画后跳转到搜索页
-		window.open('../search/Search.html?'+SearchValue,'_self');
-		}
-		var openSearchHtml=setTimeout(open,4000);	
+    	function open(){									          //Loading动画后跳转到搜索页
+		  window.open('../search/Search.html?'+SearchValue,'_self');
+		  }
+		  var openSearchHtml=setTimeout(open,4000);	
     })
+    $('#Text').keydown(function(event){          //回车Loading动画后跳转到搜索页
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==13){ 
+               var SearchValue=$('form:first input:first').val();
+               function open(){                                            
+               window.open('../search/Search.html?'+SearchValue,'_self');
+               }
+               var openSearchHtml=setTimeout(open,4000);         
+          }
+
+     })
 })

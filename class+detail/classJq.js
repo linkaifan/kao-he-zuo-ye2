@@ -105,14 +105,14 @@ $(document).ready(function(){
                			});
 
                			}
-                             page('#class1','0','0');page('#class1','1','0');page('#class1','2','0'); 
+                             page('#class1','0','0');page('#class1','1','0');page('#class1','2','0'); 	//初始化
                               $('nav a').each(function(){
                                    $(this).click(function(){
                                    if ($('#class1').attr('class')=="tabClassActive"){     
                                         page('#class1','0','0');page('#class1','1','0');page('#class1','2','0');     //分类1翻页
                                         
                                    }
-               			     else if($('#class2').attr('class')=="tabClassActive"){
+               			     		else if($('#class2').attr('class')=="tabClassActive"){
                                         page('#class2','0','1');page('#class2','1','1');page('#class2','2','1');     //分类2翻页
                                         
                                    }
@@ -124,9 +124,11 @@ $(document).ready(function(){
                			          page('#class4','0','3');page('#class4','1','3');page('#class4','2','3');     //分类4翻页
                                         
                                    }
+                                   $('footer a:first').click();
                                    })
+
                               })   
-               			//到这里写完了分类的数据交互，但代码还是有重复的部分。哎，等有时间冷静下来改！功能部分还不太完美，比如，切换分类后如何跳转到第一页。
+               			//到这里写完了分类的数据交互，但代码还是有重复的部分。哎，等有时间冷静下来改！功能部分还不太完美，
 
 
         				
@@ -138,6 +140,17 @@ $(document).ready(function(){
                window.open('../search/Search.html?'+SearchValue,'_self');
           }
           var openSearchHtml=setTimeout(open,4000);    
+     })
+     $('#Text').keydown(function(event){ 
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==13){ 
+               var SearchValue=$('form:first input:first').val();
+               function open(){                                            //回车Loading动画后跳转到搜索页
+               window.open('../search/Search.html?'+SearchValue,'_self');
+               }
+               var openSearchHtml=setTimeout(open,4000);         
+          }
+
      })
 
 });

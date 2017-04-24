@@ -12,7 +12,7 @@ $(document).ready(function(){
               success: function(data){
                		var obj = eval ("(" + data + ")");
 	                var username=obj.user[0].name;
-                  $('#landIcon p').text(obj.user[0].name).css('display','block');   
+                  $('#landIcon span').text(obj.user[0].name).css('display','block');   
               }
           });
 	 });
@@ -23,4 +23,16 @@ $(document).ready(function(){
           }
           var openSearchHtml=setTimeout(open,4000);    
      })
+   $('#Text').keydown(function(event){ 
+          var e = event || window.event || arguments.callee.caller.arguments[0];
+          if(e && e.keyCode==13){ 
+               var SearchValue=$('#Text').val();
+               function open(){                                            //回车Loading动画后跳转到搜索页
+               window.open('../search/Search.html?'+SearchValue,'_self');
+               }
+               var openSearchHtml=setTimeout(open,4000);         
+          }
+
+     })
+   
 });	

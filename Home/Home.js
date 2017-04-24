@@ -50,7 +50,7 @@ window.onload=function ()
 		oLoadingBox.style.display='block';
 		var openSearchHtml=setTimeout(open,4000);	
 	}
-	document.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
+	oText.onkeydown=function(event){                    //键入回车，遮罩弹出 键入Esc，遮罩消失
     var e = event || window.event || arguments.callee.caller.arguments[0];
         if(e && e.keyCode==13){ 
                 oLoadingBox.style.display='block'; 
